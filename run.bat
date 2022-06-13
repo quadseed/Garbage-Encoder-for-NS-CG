@@ -7,7 +7,8 @@ if exist .\ffmpeg (
 	  timeout 3
 	  ffmpeg\bin\ffmpeg -i "source\%%~nxf" -vcodec libx264 -b:v 2500k "output\%%~nxf"
 	  echo %%~nxfを変換しました
-)
+	)
+echo [Info] すべての動画の変換が終了しました
 
 ) else (
 	echo [Info] エンコードに使用するffmpegをダウンロードします
