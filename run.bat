@@ -3,10 +3,10 @@ chcp 65001 > nul
 if exist .\ffmpeg (
 	echo [Info] ffmpegが見つかりました
 	for %%f in (source\*) do (
-	  echo %%~nxfを変換します
+	  echo [Info] %%~nxfを変換します
 	  timeout 3
 	  ffmpeg\bin\ffmpeg -i "source\%%~nxf" -vcodec libx264 -b:v 2500k "output\%%~nxf"
-	  echo %%~nxfを変換しました
+	  echo [Info] %%~nxfを変換しました
 	)
 echo [Info] すべての動画の変換が終了しました
 
